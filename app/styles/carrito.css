@@ -1,0 +1,90 @@
+.contenido{
+   display:grid;
+   align-items: flex-start; /* para tener la altura estática */
+   gap:5rem; 
+}
+
+@media (min-width:768px){
+    .contenido{
+        grid-template-columns: 3fr 2fr;
+    }
+}
+
+.resumen{
+    background-color:#edefef;
+    padding: 3rem;
+    border-radius: 1rem;
+    position: sticky;
+    top: 3rem;
+}
+
+.producto{
+    display:grid;
+    grid-template-columns: 2fr 3fr;
+    gap:4rem;
+    align-items:center;
+    padding: 3rem 0;
+    border-bottom: 1px solid #cfcfcf;
+    position: relative;
+}
+
+.producto:last-of-type{ /* Para que el último tenga esas caraterísticas*/
+    border-bottom: none;
+}
+
+.producto img{
+    max-width: 8rem;
+    height: min-content;
+}
+
+.producto p{
+    margin: 0 0 1rem 0;
+}
+
+.producto .select{
+    all:unset; /*ELIMINAR TODO EL DISEÑO POR DEFECTO */
+    border: 1px solid #cfcfcf;
+    text-align: center;
+    width:100%;
+    display: block;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.producto span{
+    font-weight:900;
+    font-size: 3.2rem;
+}
+
+.nombre{
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+.producto .precio{
+    margin-top: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.subtotal{
+    font-size: 2rem;
+}
+
+.subtotal span{
+    font-weight: 700;
+}
+
+.btn-eliminar{
+    all: unset;
+    position: absolute;
+    top:3rem;
+    right: 1rem;
+    padding:1rem;
+    
+    border-radius: 100%;
+}
+
+.btn-eliminar:hover{
+    cursor:pointer;
+}
